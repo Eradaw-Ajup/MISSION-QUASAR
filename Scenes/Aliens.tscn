@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Images/Daco_4340148.png" type="Texture" id=1]
+[ext_resource path="res://Aliens.gd" type="Script" id=2]
+[ext_resource path="res://fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://ShootMusic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://musicbullete.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_color = Color( 0.0352941, 0.0313726, 0.0313726, 1 )
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[node name="Aliens" type="Area2D" groups=[
+"aliens",
+]]
+script = ExtResource( 2 )
+dvelocity = Vector2( 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -46.9326, -0.795116, -81.8673, 30.83, -22.1105, 38.9202, 42.6107, 14.8336, 82.326, -22.1237, 34.7044, -28.1913, 28.0852, -28.3752, 11.9049, -38.4879, -4.27539, -39.9588, -18.8009, -34.8105, -30.9361, -25.6172, -39.2101, -14.769, -39.9456, -7.23046 )
+
+[node name="Splash2" type="CPUParticles2D" parent="." groups=[
+"D_amage",
+]]
+position = Vector2( 0.538849, 3.05176e-05 )
+rotation = 0.00349066
+scale = Vector2( 5, 3 )
+emitting = false
+amount = 32
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.5
+emission_shape = 3
+emission_points = PoolVector2Array(  )
+emission_colors = PoolColorArray(  )
+direction = Vector2( 0, 100 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 20.0
+initial_velocity_random = 0.74
+scale_amount = 0.5
+scale_amount_random = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="f_pos" type="Node2D" parent="."]
+
+[node name="Elife" type="Label" parent="." groups=[
+"aliens",
+"comm",
+]]
+margin_left = -41.6478
+margin_top = -6.62578
+margin_right = 45.3522
+margin_bottom = 14.3742
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.984314, 0.211765, 0.0313726, 1 )
+custom_colors/font_outline_modulate = Color( 0.211765, 0.129412, 0.129412, 1 )
+custom_colors/font_color_shadow = Color( 0.105882, 0.0941176, 0.0941176, 1 )
+text = "LIFE : 100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShootMusic" parent="." instance=ExtResource( 4 )]
+position = Vector2( -112.347, 115.737 )
+
+[node name="musicbullete" parent="." instance=ExtResource( 5 )]
+[connection signal="area_entered" from="." to="." method="_on_Aliens_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

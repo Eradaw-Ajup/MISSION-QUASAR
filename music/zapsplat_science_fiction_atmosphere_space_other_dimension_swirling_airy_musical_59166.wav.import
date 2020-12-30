@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_science_fiction_atmosphere_space_other_dimension_swirling_airy_musical_59166.wav-c6a367bd0375a2e9a3628a792a65e077.sample"
+
+[deps]
+
+source_file="res://music/zapsplat_science_fiction_atmosphere_space_other_dimension_swirling_airy_musical_59166.wav"
+dest_files=[ "res://.import/zapsplat_science_fiction_atmosphere_space_other_dimension_swirling_airy_musical_59166.wav-c6a367bd0375a2e9a3628a792a65e077.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

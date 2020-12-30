@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/ThatNogoFontCasual.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Images/8-2-space-png-pic_800x800.png" type="Texture" id=2]
+[ext_resource path="res://msg3.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="msg3" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 655.277, 392.426 )
+scale = Vector2( 1.7867, 1.59234 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 485.239
+margin_top = 240.309
+margin_right = 758.239
+margin_bottom = 276.309
+custom_fonts/font = SubResource( 1 )
+text = "MISSION FAILED"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 173.3
+margin_top = 462.132
+margin_right = 392.3
+margin_bottom = 509.132
+custom_fonts/font = SubResource( 2 )
+text = "TRY AGAIN"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 889.605
+margin_top = 469.064
+margin_right = 1108.6
+margin_bottom = 516.064
+custom_fonts/font = SubResource( 2 )
+text = "QUIT"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

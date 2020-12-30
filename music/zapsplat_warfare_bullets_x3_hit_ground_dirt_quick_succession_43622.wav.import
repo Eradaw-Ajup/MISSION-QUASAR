@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_warfare_bullets_x3_hit_ground_dirt_quick_succession_43622.wav-b7f2d49a39b6cd7dd2c0a1222778ea9e.sample"
+
+[deps]
+
+source_file="res://music/zapsplat_warfare_bullets_x3_hit_ground_dirt_quick_succession_43622.wav"
+dest_files=[ "res://.import/zapsplat_warfare_bullets_x3_hit_ground_dirt_quick_succession_43622.wav-b7f2d49a39b6cd7dd2c0a1222778ea9e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://music/esm_8bit_explosion_medium_bomb_boom_blast_cannon_retro_old_school_classic_cartoon.wav" type="AudioStream" id=1]
+
+[node name="ShootMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
